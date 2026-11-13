@@ -70,7 +70,7 @@ The dashboard shows calls by district and type, calls by hour of day, and averag
 
 ## References
 
-Chirico, M. (n.d.). *Emergency - 911 calls* [Data set]. Kaggle. https://www.kaggle.com/datasets/mchirico/montcoalert
+- Chirico, M. (n.d.). *Emergency - 911 calls* [Data set]. Kaggle. https://www.kaggle.com/datasets/mchirico/montcoalert
 - Oracle. (n.d.). *Oracle APEX documentation*. https://apex.oracle.com
 - Oracle. (n.d.). *Oracle Database PL/SQL language reference*. https://docs.oracle.com
 - Rosenberg, A., Rickard, R., Uwinshuti, F. Z., Mbanjumucyo, G., Nkeshimana, M., Uwitonze, J. M., Kabagema, I., Dushime, T., & Jayaraman, S. (2020). Collaboration for preliminary design of a mobile health solution for ambulance dispatch in Rwanda. *Global Health Innovation, 3*(2), Article 3. https://doi.org/10.15641/ghi.v3i2.986
