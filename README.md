@@ -16,14 +16,6 @@
 
 ---
 
-# Project Overview
-
-The Online Job Recruitment System is an Oracle database project developed to improve and automate the recruitment process for employers and job seekers. The system allows employers to advertise job vacancies, applicants to submit applications online, and administrators to manage recruitment activities efficiently.
-
-The project will be developed using Oracle Database and PL/SQL as part of the Database Development with PL/SQL Capstone Project.
-
----
-
 # Problem Statement
 
 Many organizations still manage recruitment manually through emails, paper documents, and spreadsheets. These methods make it difficult to organize applicant information, monitor job applications, schedule interviews, and generate recruitment reports.
