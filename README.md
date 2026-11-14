@@ -111,17 +111,17 @@ The system will handle:
 The project will include an Oracle APEX web application that connects directly to the Oracle database. Employers will be able to post jobs, applicants will submit applications online, and administrators will manage recruitment activities through a user-friendly interface. The application will execute PL/SQL procedures and display real-time information from the database.
 
 
-# References
+#  12: References
 
-Elmasri, R., & Navathe, S. B. (2016). *Fundamentals of Database Systems* (7th ed.). Pearson.
+1. National Institute of Statistics of Rwanda (NISR). (2025). *Labour Force Survey Annual Report 2025*. https://www.statistics.gov.rw/
 
-Oracle. (2026). *Oracle AI Database PL/SQL Language Reference (26ai).* https://docs.oracle.com/en/database/oracle/oracle-database/26/lnpls/ :chatgpt-content-reference{index="0"}
+2. Rwanda Labour Market Information System (LMIS). (2026). *Rwanda Labour Market Information System*. https://lmis.ippis.rw/
 
-Oracle. (2026). *Oracle APEX Documentation.* https://docs.oracle.com/en/database/oracle/apex/
+3. Oracle. (2026). *Oracle AI Database PL/SQL Language Reference (26ai).* https://docs.oracle.com/en/database/oracle/oracle-database/26/lnpls/
 
-Silberschatz, A., Korth, H. F., & Sudarshan, S. (2019). *Database System Concepts* (7th ed.). McGraw-Hill Education.
+4. LinkedIn Job Postings Dataset. (2024). *Kaggle*. https://www.kaggle.com/datasets/arshkon/linkedin-job-postings
 
-LinkedIn Job Postings Dataset. (2024). *Kaggle.* https://www.kaggle.com/datasets/arshkon/linkedin-job-postings
+5. Elmasri, R., & Navathe, S. B. (2016). *Fundamentals of Database Systems* (7th ed.). Pearson.
 
-World Bank. (2024). *World Development Indicators.* https://data.worldbank.org/
+6. Silberschatz, A., Korth, H. F., & Sudarshan, S. (2019). *Database System Concepts* (7th ed.). McGraw-Hill Education.
 
