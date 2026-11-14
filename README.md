@@ -1,71 +1,139 @@
-# Emergency Ambulance Call-Out and Response Time Tracker
+# Online Job Recruitment System
 
-**Name:** BILL FRAZER ELIA
-**ID:** 20252SEN030
-**Course:** INSY 8311, Database Development with PL/SQL
+## Student 
+
+**Name:** Bill Frazer Elia  
+**Student ID:** 202052SEN030  
+**Course:** INSY 8311 – Database Development with PL/SQL  
+**Academic Year:** 2026–2027 Semester I  
 **Instructor:** Eric Maniraguha
-**Keywords:** Emergency response, Ambulance dispatch, Response time
 
-## Problem statement
+---
 
-When an emergency call arrives, every minute affects survival. Many emergency services still record calls on paper or in scattered files. As a result, dispatchers cannot easily see which ambulances are free, an ambulance can be sent to two calls at once, and nobody measures how long it takes to arrive. Managers cannot identify districts with slow response or peak call hours. In Rwanda, the national ambulance service (SAMU) reported an average response time of 59 minutes in 2018, with 39% of calls not completed within the golden hour, and it had no established electronic dispatch system (Rosenberg et al., 2020). This project addresses the lack of a structured, auditable record of emergency calls and ambulance response.
+# Project Title
 
-## Objectives
+**Online Job Recruitment System**
 
-**Main objective:** Build an Oracle database with PL/SQL that manages emergency calls, ambulance dispatch and response times, so that services can dispatch reliably and measure performance.
+---
 
-**Specific objectives:**
-1. Record emergency calls, call types and districts.
-2. Manage ambulances, crews and dispatches, and block dispatching a busy ambulance.
-3. Calculate and report response times by district.
-4. Record every insert, update and delete in an audit log.
-5. Present call volumes and response times in a live dashboard.
+# Project Overview
 
-## Data source
+The Online Job Recruitment System is an Oracle database project developed to improve and automate the recruitment process for employers and job seekers. The system allows employers to advertise job vacancies, applicants to submit applications online, and administrators to manage recruitment activities efficiently.
 
-- **Dataset:** Emergency - 911 Calls, Montgomery County, PA (Kaggle)
-- **Link:** https://www.kaggle.com/datasets/mchirico/montcoalert
-- **Content:** call reason, timestamp, township, zip code and coordinates, filtered to EMS calls
-- **Size used:** [number of records after filtering]
-- **Licence:** [copy the licence from the Kaggle page]
-- **Personal data:** the address column will be removed so no household can be identified.
+The project will be developed using Oracle Database and PL/SQL as part of the Database Development with PL/SQL Capstone Project.
 
-**Real and simulated data:** Call information comes from the dataset. Ambulances, crews, hospitals, dispatch and arrival times and outcomes are simulated and clearly labelled as such, because the dataset does not contain them.
+---
 
-## Innovation
+# Problem Statement
 
-**Option:** Analytics dashboard
-**Name:** AmbuTrack Live Dashboard
-**Tool:** Oracle APEX, connected to the live Oracle database
+Many organizations still manage recruitment manually through emails, paper documents, and spreadsheets. These methods make it difficult to organize applicant information, monitor job applications, schedule interviews, and generate recruitment reports.
 
-The dashboard shows calls by district and type, calls by hour of day, and average response time per district, with date and district filters. All business rules stay in PL/SQL procedures and triggers. The dashboard only displays and uses the data. It will be demonstrated live, and documented in the `innovation/` folder.
+The Online Job Recruitment System addresses these challenges by providing a centralized database that stores recruitment information securely and automates major recruitment processes.
 
-## Planned tables and PL/SQL features
+---
 
-**Planned tables:** CALL_TYPE, DISTRICT, HOSPITAL, EMERGENCY_CALL, AMBULANCE, CREW_MEMBER, DISPATCH, DISPATCH_CREW, CALL_OUTCOME, AUDIT_LOG
+# Main Objective
 
-**Relationships:**
-- A district has many calls.
-- A call has one type.
-- A call can have one or more dispatches.
-- A dispatch uses one ambulance.
-- A dispatch has many crew members through DISPATCH_CREW.
-- A dispatch can end at one hospital (destination only, no patient records).
-- Each call ends with one outcome.
+To develop a secure and efficient Oracle database system that manages online recruitment activities using PL/SQL.
 
-**Planned PL/SQL features:**
+---
 
-| Feature | Where it is used |
-|---|---|
-| Procedures: `log_emergency_call`, `dispatch_ambulance`, `record_arrival`, `close_call` | Run the call and dispatch workflow |
-| Functions: `calc_response_minutes`, `get_available_ambulances`, `get_avg_response` | Measure response time and find free ambulances |
-| Cursor | Lists open calls with no dispatch after 5 minutes |
-| Package `ambu_pkg` | Groups the procedures and functions |
-| Trigger | Blocks dispatching an ambulance already on a call |
-| Trigger | Blocks arrival times earlier than dispatch times |
-| Trigger | Updates ambulance status on dispatch and close |
-| Trigger | Writes every insert, update and delete to AUDIT_LOG |
-| Restriction rule | Blocks deletion of call records, and edits to closed calls by non-admin users |
-| Exceptions | Ambulance not available, unknown call, invalid status |
+# Specific Objectives
 
-- Patel, A., Krebs, E., Andrade, L., Rulisa, S., Vissoci, J., & Staton, C. (2016). *RW Police data 2013* [Data set]. Figshare. https://doi.org/10.6084/m9.figshare.2058630
+- Manage employer information.
+- Manage applicant information.
+- Store job vacancies.
+- Record job applications.
+- Schedule interviews.
+- Track application status.
+- Generate recruitment reports.
+
+---
+
+# Proposed Data Source
+
+A real-world recruitment dataset will be obtained from a public source such as Kaggle. The selected dataset will contain job vacancies, applicants, skills, and recruitment information suitable for educational purposes.
+
+---
+
+# Planned Database Tables
+
+- Users
+- Employers
+- Applicants
+- Jobs
+- Applications
+- Interviews
+- Skills
+- Applicant_Skills
+- Departments
+- Notifications
+- Audit_Log
+
+---
+
+# Planned PL/SQL Features
+
+## Procedures
+
+- Add New Job
+- Register Applicant
+- Submit Application
+- Schedule Interview
+- Update Application Status
+
+## Functions
+
+- Count Applicants per Job
+- Check Job Availability
+- Calculate Total Applications
+
+## Triggers
+
+- Prevent applications after the deadline.
+- Automatically update job status when vacancies are filled.
+- Record all application status changes in the audit log.
+
+## Cursors
+
+- Display applicants for a selected job.
+- Generate recruitment reports.
+
+## Packages
+
+A PL/SQL package will group recruitment-related procedures and functions for easier maintenance and reuse.
+
+## Exception Handling
+
+The system will handle:
+
+- Duplicate applications
+- Invalid Job IDs
+- Missing applicant information
+- Database errors
+
+---
+
+# Innovation
+
+The project will include an Oracle APEX web application that connects directly to the Oracle database. Employers will be able to post jobs, applicants will submit applications online, and administrators will manage recruitment activities through a user-friendly interface. The application will execute PL/SQL procedures and display real-time information from the database.
+
+
+# References
+
+The complete list of references will be included in APA 7th Edition format after completing the research phase. Sources will include:
+
+- Oracle Documentation
+- Google Scholar
+- IEEE Xplore
+- Kaggle
+- World Bank Data
+- ScienceDirect
+
+---
+
+## Project Status
+
+**Current Phase:** Phase 0 – Research, Data Source, and Project Proposal
+
+Future phases will include business process modelling, database design, normalization, Oracle database implementation, PL/SQL programming, innovation, documentation, and final presentation.
