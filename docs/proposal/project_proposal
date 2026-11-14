@@ -1,0 +1,102 @@
+# Project Proposal
+
+## Online Job Recruitment and Applicant Tracking System
+
+
+# 1. Problem Statement
+
+Many organizations still manage recruitment using paper documents, email communication, or spreadsheets. These methods often result in:
+
+- Lost or duplicate applications.
+- Slow recruitment processes.
+- Difficult applicant tracking.
+- Poor record management.
+- Limited reporting capabilities.
+
+A centralized Oracle database can automate recruitment activities, improve data accuracy, and support better hiring decisions.
+
+---
+
+# 2. Proposed Solution
+
+The proposed solution is to develop an Oracle-based recruitment management system that enables:
+
+- Employer registration
+- Applicant registration
+- Job posting
+- Online job applications
+- Interview scheduling
+- Applicant tracking
+- Recruitment reporting
+
+The system will use Oracle PL/SQL to automate business processes and maintain data integrity.
+
+---
+
+# 3. Data Source
+
+The project will use the **LinkedIn Job Postings Dataset** available on Kaggle.
+
+**Dataset Name:** LinkedIn Job Postings Dataset
+
+**Source:** Kaggle
+
+The dataset contains information such as:
+
+- Job titles
+- Company names
+- Locations
+- Employment types
+- Skills
+- Job descriptions
+
+The dataset will be cleaned, normalized, and imported into Oracle Database for testing and reporting.
+
+---
+
+# 4. Planned Database Tables
+
+- Users
+- Employers
+- Applicants
+- Jobs
+- Applications
+- Interviews
+- Skills
+- Applicant_Skills
+- Departments
+- Notifications
+- Audit_Log
+
+---
+
+# 5. Planned PL/SQL Features
+
+- Procedures
+- Functions
+- Triggers
+- Cursors
+- Packages
+- Exception Handling
+
+---
+
+# 6. Innovation
+
+The project will include an **Oracle APEX** web application that allows employers to post job vacancies, applicants to apply online, and administrators to manage recruitment activities through a user-friendly interface connected to the Oracle Database.
+
+---
+
+# 7. References
+
+1. Elmasri, R., & Navathe, S. B. (2016). *Fundamentals of Database Systems* (7th ed.). Pearson.
+
+2. National Public Service Commission (NPSC). (2016). *Citizen Satisfaction Survey on Recruitment Practices in Public Institutions.*
+
+3. Job in Rwanda. *Job in Rwanda Recruitment Platform.* [https://www.jobinrwanda.com](https://www.jobinrwanda.com)
+
+4. LinkedIn Job Postings Dataset. (2024). *Kaggle.*
+
+5. Nikolaou, I. (2021). *What is the role of technology in recruitment and selection?* *The Spanish Journal of Psychology, 24*, e31.
+
+6. Oracle Corporation. (2026). *Oracle AI Database PL/SQL Language Reference (26ai).*
