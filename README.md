@@ -42,7 +42,7 @@ To develop a secure and efficient Oracle database system that manages online rec
 
 ---
 
-# Proposed Data Source
+# Data Source
 
 A real-world recruitment dataset will be obtained from a public source such as Kaggle. The selected dataset will contain job vacancies, applicants, skills, and recruitment information suitable for educational purposes.
 
@@ -113,19 +113,15 @@ The project will include an Oracle APEX web application that connects directly t
 
 # References
 
-The complete list of references will be included in APA 7th Edition format after completing the research phase. Sources will include:
+Elmasri, R., & Navathe, S. B. (2016). *Fundamentals of Database Systems* (7th ed.). Pearson.
 
-- Oracle Documentation
-- Google Scholar
-- IEEE Xplore
-- Kaggle
-- World Bank Data
-- ScienceDirect
+Oracle. (2026). *Oracle AI Database PL/SQL Language Reference (26ai).* https://docs.oracle.com/en/database/oracle/oracle-database/26/lnpls/ :chatgpt-content-reference{index="0"}
 
----
+Oracle. (2026). *Oracle APEX Documentation.* https://docs.oracle.com/en/database/oracle/apex/
 
-## Project Status
+Silberschatz, A., Korth, H. F., & Sudarshan, S. (2019). *Database System Concepts* (7th ed.). McGraw-Hill Education.
 
-**Current Phase:** Phase 0 – Research, Data Source, and Project Proposal
+LinkedIn Job Postings Dataset. (2024). *Kaggle.* https://www.kaggle.com/datasets/arshkon/linkedin-job-postings
 
-Future phases will include business process modelling, database design, normalization, Oracle database implementation, PL/SQL programming, innovation, documentation, and final presentation.
+World Bank. (2024). *World Development Indicators.* https://data.worldbank.org/
+
