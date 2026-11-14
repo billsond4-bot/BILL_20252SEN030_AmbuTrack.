@@ -68,9 +68,4 @@ The dashboard shows calls by district and type, calls by hour of day, and averag
 | Restriction rule | Blocks deletion of call records, and edits to closed calls by non-admin users |
 | Exceptions | Ambulance not available, unknown call, invalid status |
 
-## References
-
-- Chirico, M. (n.d.). *Emergency - 911 calls* [Data set]. Kaggle. https://www.kaggle.com/datasets/mchirico/montcoalert
-- Oracle. (n.d.). *Oracle APEX documentation*. https://apex.oracle.com
-- Oracle. (n.d.). *Oracle Database PL/SQL language reference*. https://docs.oracle.com
-- Rosenberg, A., Rickard, R., Uwinshuti, F. Z., Mbanjumucyo, G., Nkeshimana, M., Uwitonze, J. M., Kabagema, I., Dushime, T., & Jayaraman, S. (2020). Collaboration for preliminary design of a mobile health solution for ambulance dispatch in Rwanda. *Global Health Innovation, 3*(2), Article 3. https://doi.org/10.15641/ghi.v3i2.986
+- Patel, A., Krebs, E., Andrade, L., Rulisa, S., Vissoci, J., & Staton, C. (2016). *RW Police data 2013* [Data set]. Figshare. https://doi.org/10.6084/m9.figshare.2058630
