@@ -1,0 +1,70 @@
+# Research Log
+
+## Project Information
+
+**Project Title:** Online Job Recruitment and Applicant Tracking System
+
+**Student Name:** Bill Frazer Elia
+
+**Student ID:** 202052SEN030
+
+**Course:** INSY 8311 – Database Development with PL/SQL
+
+**Instructor:** Eric Maniraguha
+
+**Institution:** Adventist University of Central Africa (AUCA)
+
+**Academic Year:** 2026–2027 Semester I
+
+---
+
+# Research Objective
+
+The objective of this research is to understand current recruitment practices, investigate existing online recruitment systems, identify challenges faced by organizations, and collect reliable information that will support the design and implementation of an Oracle Database solution using PL/SQL.
+
+---
+
+# Research Sources
+
+| No. | Source | Type | Key Findings | Gap Identified |
+|-----|--------|------|--------------|----------------|
+| 1 | Nikolaou, I. (2021). *What is the role of technology in recruitment and selection?* The Spanish Journal of Psychology, 24, e31. | Research Paper | Technology has transformed recruitment by improving efficiency, expanding candidate reach, and supporting digital hiring processes. | Many organizations still face challenges adopting recruitment technologies effectively. |
+| 2 | Woods, S. A., Ahmed, S., Nikolaou, I., Costa, A. C., & Anderson, N. (2020). *Personnel selection in the digital age.* European Journal of Work and Organizational Psychology. | Research Paper | Digital recruitment systems improve hiring quality, reduce recruitment time, and support better decision-making. | Smaller organizations often lack affordable and easy-to-use recruitment systems. |
+| 3 | National Public Service Commission (NPSC), Rwanda. (2016). *Citizen Satisfaction Survey on Recruitment Practices in Public Institutions.* | Rwanda Report | The survey found that many job seekers rely on online advertisements and recommended improving electronic recruitment services in Rwanda. | Recruitment processes can still be delayed by limited access to efficient online recruitment platforms. |
+| 4 | Job in Rwanda. https://www.jobinrwanda.com | Existing System | Job in Rwanda provides online job advertisements, employer services, and job search opportunities within Rwanda. | The platform mainly advertises vacancies and does not provide a complete recruitment management solution for every organization. |
+| 5 | LinkedIn Job Postings Dataset. (2024). Kaggle. | Dataset | Contains real-world job postings, companies, locations, employment types, and required skills suitable for database development. | The dataset requires cleaning and normalization before implementation in Oracle Database. |
+| 6 | Oracle Corporation. (2026). *Oracle AI Database PL/SQL Language Reference (26ai).* | Technical Source | Explains Oracle PL/SQL procedures, functions, packages, triggers, cursors, and exception handling required for database application development. | Focuses on technical implementation rather than complete recruitment business solutions. |
+
+---
+
+# Summary of Findings
+
+The research shows that online recruitment systems improve efficiency, reduce paperwork, and simplify applicant management. Existing recruitment platforms demonstrate the benefits of digital hiring but may not meet the needs of every organization due to cost or limited customization. The selected dataset provides realistic recruitment information that can be normalized and stored in an Oracle database. Oracle PL/SQL provides the tools required to automate recruitment processes, enforce business rules, and maintain data integrity.
+
+---
+
+# Research Gap
+
+Many organizations, particularly small and medium-sized organizations, continue to depend on manual recruitment methods or commercial platforms that may be costly. There is a need for a secure, affordable, and database-driven recruitment system developed with Oracle Database and PL/SQL that supports applicant tracking, interview scheduling, and recruitment reporting.
+
+---
+
+# Conclusion
+
+This research confirms that an Online Job Recruitment and Applicant Tracking System is a suitable solution for improving recruitment management. The findings provide a strong foundation for designing and implementing an Oracle database capable of managing employers, applicants, job vacancies, applications, interviews, and reports while applying Oracle PL/SQL programming techniques.
+
+---
+
+# References
+
+1. Nikolaou, I. (2021). *What is the role of technology in recruitment and selection?* The Spanish Journal of Psychology, 24, e31.
+
+2. Woods, S. A., Ahmed, S., Nikolaou, I., Costa, A. C., & Anderson, N. (2020). *Personnel selection in the digital age.* European Journal of Work and Organizational Psychology.
+
+3. National Public Service Commission (NPSC). (2016). *Citizen Satisfaction Survey on Recruitment Practices in Public Institutions.*
+
+4. Job in Rwanda. https://www.jobinrwanda.com
+
+5. LinkedIn Job Postings Dataset. (2024). *Kaggle.*
+
+6. Oracle Corporation. (2026). *Oracle AI Database PL/SQL Language Reference (26ai).*
