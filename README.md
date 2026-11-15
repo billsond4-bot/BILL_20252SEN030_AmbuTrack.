@@ -125,3 +125,24 @@ The project will include an Oracle APEX web application that connects directly t
 
 6. Silberschatz, A., Korth, H. F., & Sudarshan, S. (2019). *Database System Concepts* (7th ed.). McGraw-Hill Education.
 
+
+# Phase I – Business Process Modeling
+
+## Selected Business Process
+
+Job Application Process
+
+The Job Application Process begins when an applicant searches for a job and submits an application. The system validates and stores the application, notifies the employer, and supports the employer in reviewing applications, scheduling interviews, and updating the application status.
+
+## Modeling Tool
+
+draw.io (diagrams.net) using BPMN with swimlanes.
+
+## Business Process Diagram
+
+Link: https://app.diagrams.net/#G1Q7e8TjtKRuMl-rSArh28SeADiPXWz8kS#%7B%22pageId%22%3A%22uSyauiRXrKerwDkEPsOc%22%7D
+
+## Supporting Explanation Document
+
+docs/business_process/business_process_explanation.pdf
+
