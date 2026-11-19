@@ -1,14 +1,14 @@
-# Normalisation: UNF → 1NF → 2NF → 3NF
+Normalisation: UNF → 1NF → 2NF → 3NF
 
-**Dataset:** recruiting-pipeline-v4 (5 CSV files, 1,783 records). **Student:** Bill Frazer Elia (20252SEN030), Group D.
+Dataset:  recruiting-pipeline-v4 (5 CSV files, 1,783 records). Student: Bill Frazer Elia (20252SEN030), Group D.
 
 All rows below are real rows copied from `data/raw/`. Blank raw cells are shown as `(blank)` before cleaning and as `NULL` once they become real optional columns.
 
-## 1. How the raw data arrived, and how UNF was built
+How the raw data arrived, and how UNF was built
 
 The export is already split into five related CSV files. A recruiting system, or an API for it, would normally give one **nested record per application**, with the candidate, job opening, interviews and offer inside it. I rebuilt that view from the foreign keys (`applications.candidate_id`, `applications.job_opening_id`, `interviews.application_id`, `offers.application_id`) so the normalisation starts from the realistic unnormalised shape and every step can be traced back to the raw files.
 
-## 2. Entities identified (7 tables)
+Entities identified (7 tables)
 
 | # | Table | Why it exists | Rule applied |
 |---|---|---|---|
@@ -22,7 +22,7 @@ The export is already split into five related CSV files. A recruiting system, or
 
 That meets the "at least 5 related tables" aim with 7.
 
-## 3. Step by step
+ Step by step
 
 ### 3.1 UNF (unnormalised): one nested record per application
 
