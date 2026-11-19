@@ -5,7 +5,7 @@ Oracle data types and sizes are left out on purpose; they are added in Phase IV.
 
 ![ERD](erd.png)
 
-## Relationships (crow's-foot notation, as drawn in `erd.png`)
+## Relationships.
 
 | Parent (one side) | Child (many side) | Foreign key in child | Cardinality | Optionality |
 |---|---|---|---|---|
@@ -18,7 +18,7 @@ Oracle data types and sizes are left out on purpose; they are added in Phase IV.
 
 Many-to-many relationships resolved: CANDIDATE ↔ JOB_OPENING through **APPLICATION**; APPLICATION ↔ INTERVIEWER through **INTERVIEW**.
 
-## 1. DEPARTMENT
+DEPARTMENT
 
 Lookup of the departments that open vacancies.
 
@@ -27,7 +27,7 @@ Lookup of the departments that open vacancies.
 | department_id | Identifier of the department | PK | Yes | Yes | generated (Phase IV) |
 | department_name | Name of the department: Engineering, HR, Marketing or Sales |  | Yes | Yes | job_openings.department |
 
-## 2. JOB_OPENING
+JOB_OPENING
 
 One vacancy opened by a department.
 
@@ -39,7 +39,7 @@ One vacancy opened by a department.
 | created_at | Date and time the opening was created |  | Yes | No | job_openings.created_at |
 | status | Whether the opening is Open or Closed |  | Yes | No | job_openings.status |
 
-## 3. CANDIDATE
+CANDIDATE
 
 One person who entered the recruiting system.
 
@@ -50,7 +50,7 @@ One person who entered the recruiting system.
 | email | Candidate's email address, stored in lower case |  | Yes | Yes (after merging the 3 duplicate people) | candidates.email |
 | registered_at | Date and time the candidate entered the system |  | Yes | No | candidates.applied_at |
 
-## 4. APPLICATION (junction table)
+APPLICATION (junction table)
 
 One candidate applying to one job opening. It resolves the many-to-many between CANDIDATE and JOB_OPENING.
 
@@ -65,7 +65,7 @@ One candidate applying to one job opening. It resolves the many-to-many between 
 
 Dropped from the raw file: `application_date` (conflicting duplicate of `applied_at`) and `interview_count` (derived from INTERVIEW).
 
-## 5. INTERVIEWER
+INTERVIEWER
 
 A person who conducts interviews. The raw data has only a name, so a name is treated as one person.
 
@@ -74,7 +74,7 @@ A person who conducts interviews. The raw data has only a name, so a name is tre
 | interviewer_id | Identifier of the interviewer | PK | Yes | Yes | generated (Phase IV) |
 | full_name | Interviewer's full name (anonymised or fictitious) |  | Yes | Yes | interviews.interviewer |
 
-## 6. INTERVIEW (junction table)
+INTERVIEW (junction table)
 
 One interview of one application. It is the child table of the interview list and resolves the many-to-many between APPLICATION and INTERVIEWER.
 
@@ -86,7 +86,7 @@ One interview of one application. It is the child table of the interview list an
 | score | Interview score, 1 to 10 (blank in {S["score_blank"]} raw rows) |  | No | No | interviews.score |
 | interviewed_at | Date and time of the interview |  | Yes | No | interviews.interviewed_at |
 
-## 7. OFFER
+OFFER
 
 A job offer made on an application; at most one per application.
 
@@ -98,7 +98,7 @@ A job offer made on an application; at most one per application.
 | offered_at | Date and time the offer was made (blank in {S["off_dt_blank"]} raw rows, all Declined) |  | No | No | offers.offered_at |
 | salary | Salary offered; the source gives no currency or period (blank in {S["sal_blank"]} raw rows) |  | No | No | offers.salary |
 
-## 8. Business rules to enforce in Phase IV
+Business rules to enforce in Phase IV
 
 1. A candidate applies to a given opening at most once (unique candidate_id + job_opening_id).
 2. An application has at most one offer (unique application_id in OFFER).
@@ -106,7 +106,7 @@ A job offer made on an application; at most one per application.
 4. `candidate_rating` is between 1 and 5; `score` is between 1 and 10.
 5. The number of interviews of an application is computed from INTERVIEW, never stored.
 
-## 9. Editable ERD source (Mermaid, relationships only)
+Editable ERD source (Mermaid, relationships only)
 
 ```mermaid
 erDiagram
