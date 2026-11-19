@@ -1,19 +1,15 @@
 # Dataset Card: Recruiting Pipeline (v4, CSV)
+ 
+ Phase II. **Student:** Bill Frazer Elia (20252SEN030), Group D. Instructor: Eric Maniraguha.
 
-**Project:** INSY 8311 Final Exam Capstone, Phase II. **Student:** Bill Frazer Elia (20252SEN030), Group D. **Instructor:** Eric Maniraguha.
-
-## 1. Overview
-
-| Item | Value |
-|---|---|
-| Name | recruiting-pipeline-v4-csv |
-| Source link | **[FILL IN: the URL or place you downloaded it from]** |
-| Licence | **[FILL IN: licence stated at the source; write "not stated" if there is none]** |
-| Format | 5 CSV files, comma-separated, header row, CRLF line endings, no byte-order mark, all values stored as text |
-| Size | 1,783 records in 5 files, 91,047 bytes (88.9 KB) |
-| Date collected | **[FILL IN: the day you downloaded it]** |
-| Period covered | 2022-01-01 to 2023-12-31 (all timestamps, `YYYY-MM-DD HH:MM:SS`) |
-| Domain | Recruiting and applicant tracking |
+Name  recruiting-pipeline-v4-csv
+Source link  [https://databasesample.com/datasets/recruiting-pipeline?utm_source]
+Licence:  [Not there]
+Format: 5 CSV files, comma-separated, header row, CRLF line endings,  all values stored as text 
+Size:  1,783 records in 5 files.
+Date collected:   19-11-2026  
+Period covered: 2022-01-01 to 2023-12-31 (all timestamps, `YYYY-MM-DD HH:MM:SS`) |
+Domain: Recruiting and applicant tracking.
 
 The two largest files, applications (506 records) and interviews (822 records), each exceed the 500-record minimum.
 
@@ -88,6 +84,3 @@ Checks were run on the unmodified files. Percentages use the file's own record c
 
 **Type problems.** CSV has no types, so every column is text. Phase IV must convert: 6 timestamp columns to DATE or TIMESTAMP (`candidates.applied_at`, `job_openings.created_at`, `applications.applied_at`, `applications.application_date`, `interviews.interviewed_at`, `offers.offered_at`), `offers.salary` to NUMBER with 2 decimals, `interviews.score` and `applications.candidate_rating` to NUMBER, and every id column to NUMBER. Blank text in optional columns must become NULL.
 
-## 7. What happens next
-
-Nothing above is corrected in Phase II. Phase IV applies the cleaning checklist in `docs/design/normalization.md` (section 6) while loading into Oracle.
