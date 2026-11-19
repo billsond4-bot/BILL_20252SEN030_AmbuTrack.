@@ -1,23 +1,20 @@
 # Dataset Card: Recruiting Pipeline (v4, CSV)
 
-**Project:** INSY 8311 Final Exam Capstone, Phase II. **Student:** Bill Frazer Elia (20252SEN030), Group D. **Instructor:** Eric Maniraguha.
+Phase II. **Student:** Bill Frazer Elia (20252SEN030), Group D. **Instructor:** Eric Maniraguha.
 
-## 1. Overview
 
-| Item | Value |
-|---|---|
-| Name | recruiting-pipeline-v4-csv |
-| Source link | https://databasesample.com/datasets/recruiting-pipeline |
-| Licence | Not stated |
-| Format | 5 CSV files, comma-separated, header row, CRLF line endings, no byte-order mark, all values stored as text |
-| Size | 1,783 records in 5 files, 91,047 bytes (88.9 KB) |
-| Date collected | 2026-11-19 |
-| Period covered | 2022-01-01 to 2023-12-31 (all timestamps, `YYYY-MM-DD HH:MM:SS`) |
-| Domain | Recruiting and applicant tracking |
+Name recruiting-pipeline-v4-csv 
+Source link: https://databasesample.com/datasets/recruiting-pipeline?utm_source
+Licence:  Not stated 
+Format  5 CSV files, comma-separated, header row, CRLF line endings, all values stored as text 
+Size: 1,783 records in 5 files.
+Date collected: 2026-11-19 
+Period covered 2022-01-01 to 2023-12-31 (all timestamps, `YYYY-MM-DD HH:MM:SS`) 
+Domain Recruiting and applicant tracking 
 
 The two largest files, applications (506 records) and interviews (822 records), each exceed the 500-record minimum.
 
-## 2. Files in `data/raw/` (never edited)
+Files in `data/raw/` 
 
 | File | Records | Columns | Bytes | SHA-256 |
 |---|---|---|---|---|
@@ -45,7 +42,7 @@ The source was downloaded as the 5 files above. For a single raw file, `recruiti
 
 The quality counts in section 6 and the normalisation work use the 5 original files; the wide file holds the same values.
 
-## 3. What one record represents
+What one record represents
 
 | File | One record is... | Columns |
 |---|---|---|
@@ -57,14 +54,14 @@ The quality counts in section 6 and the normalisation work use the 5 original fi
 
 Relationships: `applications.candidate_id` → candidates.id, `applications.job_opening_id` → job_openings.id, `interviews.application_id` → applications.id, `offers.application_id` → applications.id.
 
-## 4. Personal data and anonymisation
+Personal data and anonymisation
 
 - Personal fields present: `candidates.full_name`, `candidates.email`, `interviews.interviewer` (a person's name).
 - All 200 candidate emails use the reserved example domains (`example.com` 66, `example.net` 69, `example.org` 65), which cannot belong to real mailboxes, and the names are not linked to phone numbers or ID numbers. The data therefore looks synthetic or already anonymised.
 - Anonymisation statement: all emails use reserved example domains that cannot belong to real mailboxes, and no phone numbers or ID numbers exist, so the names and emails are treated as fictitious sample data. No real personal information was added or kept by me.
 - No phone numbers, national ID numbers or addresses exist in any file.
 
-## 5. Known gaps in the documentation
+Known gaps in the documentation
 
 - Salary has no currency or period (per month or per year); values run from 50,003.80 to 199,459.82.
 - The source does not explain `candidates.applied_at` or why `applications` holds two date columns. Phase II assumes `candidates.applied_at` is when the person entered the system.
@@ -104,6 +101,3 @@ Checks were run on the unmodified files. Percentages use the file's own record c
 
 **Type problems.** CSV has no types, so every column is text. Phase IV must convert: 6 timestamp columns to DATE or TIMESTAMP (`candidates.applied_at`, `job_openings.created_at`, `applications.applied_at`, `applications.application_date`, `interviews.interviewed_at`, `offers.offered_at`), `offers.salary` to NUMBER with 2 decimals, `interviews.score` and `applications.candidate_rating` to NUMBER, and every id column to NUMBER. Blank text in optional columns must become NULL.
 
-## 7. What happens next
-
-Nothing above is corrected in Phase II. Phase IV applies the cleaning checklist in `docs/design/normalization.md` (section 6) while loading into Oracle.
