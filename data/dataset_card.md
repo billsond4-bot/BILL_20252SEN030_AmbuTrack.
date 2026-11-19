@@ -13,7 +13,7 @@ Domain: Recruiting and applicant tracking.
 
 The two largest files, applications (506 records) and interviews (822 records), each exceed the 500-record minimum.
 
-## 2. Files in `data/raw/` (never edited)
+Files in `data/raw/`
 
 | File | Records | Columns | Bytes | SHA-256 |
 |---|---|---|---|---|
