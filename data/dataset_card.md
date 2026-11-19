@@ -25,7 +25,7 @@ The two largest files, applications (506 records) and interviews (822 records), 
 
 The SHA-256 values prove the files are byte-for-byte the originals. Recompute them with `sha256sum` at any time.
 
-## 3. What one record represents
+ What one record represents
 
 | File | One record is... | Columns |
 |---|---|---|
@@ -37,19 +37,19 @@ The SHA-256 values prove the files are byte-for-byte the originals. Recompute th
 
 Relationships: `applications.candidate_id` → candidates.id, `applications.job_opening_id` → job_openings.id, `interviews.application_id` → applications.id, `offers.application_id` → applications.id.
 
-## 4. Personal data and anonymisation
+Personal data and anonymisation
 
 - Personal fields present: `candidates.full_name`, `candidates.email`, `interviews.interviewer` (a person's name).
 - All 200 candidate emails use the reserved example domains (`example.com` 66, `example.net` 69, `example.org` 65), which cannot belong to real mailboxes, and the names are not linked to phone numbers or ID numbers. The data therefore looks synthetic or already anonymised.
 - **[CONFIRM before submitting: state in one sentence that the names are fictitious or were anonymised by the source. If any name is a real person, replace it before committing the file.]**
 - No phone numbers, national ID numbers or addresses exist in any file.
 
-## 5. Known gaps in the documentation
+Known gaps in the documentation
 
 - Salary has no currency or period (per month or per year); values run from 50,003.80 to 199,459.82.
 - The source does not explain `candidates.applied_at` or why `applications` holds two date columns. Phase II assumes `candidates.applied_at` is when the person entered the system.
 
-## 6. Data quality report (counts only; nothing was fixed)
+Data quality report.
 
 Checks were run on the unmodified files. Percentages use the file's own record count as the base.
 
